@@ -1,8 +1,8 @@
-import config
+#import config
 from huggingface_hub import InferenceClient
 models=getattr(config, "HF_MODELS", ["meta-llama/Llama-3.1-8B-Instruct"])
 def generateResponse(prompt:str,temperature:float=0.3,maxToken:int=512)->str:
-    key=getattr(config,"hfAPIKEY1",None)
+    key="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"
     if not key:
         return "Error, API-Key Missing In Config File"
     lastError=None
